@@ -50,6 +50,7 @@ app.configure('development', function(){
 var host = config.mongodb.server || 'localhost';
 var port = config.mongodb.port || mongodb.Connection.DEFAULT_PORT;
 var dbOptions = {
+  safe:true,
   auto_reconnect: config.mongodb.autoReconnect,
   poolSize: config.mongodb.poolSize
 };
@@ -270,7 +271,7 @@ app.param('document', function(req, res, next, id) {
 
     req.document = doc;
     res.locals.document = doc;
-
+d
     next();
   });
 });
