@@ -23,11 +23,11 @@ exports.index = function(req, res) {
     info: false
   };
 
-  if (typeof req.adminDb == "undefined") {
+  //if (typeof req.adminDb == "undefined") {
     return res.render('index');
-  }
+  //}
 
-  req.adminDb.serverStatus(function(err, info) {
+  /*req.adminDb.serverStatus(function(err, info) {
     if (err) {
       //TODO: handle error
       console.error(err);
@@ -36,5 +36,5 @@ exports.index = function(req, res) {
     ctx.info = info;
 
     res.render('index', ctx);
-  });
+  });*/
 };
